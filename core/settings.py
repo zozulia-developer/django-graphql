@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     # 3-d party libraries
     'graphene_django',
+
+    # project apps
+    'shop.apps.ShopConfig',
 ]
 
 MIDDLEWARE = [
@@ -125,7 +128,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # GRAPHENE SETTINGS
 GRAPHENE = {
-    'SCHEMA': 'django_root.schema.schema',
+    'SCHEMA': 'shop.schema.schema',
 }
