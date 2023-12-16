@@ -33,6 +33,7 @@ class Query(graphene.ObjectType):
                 cheapest_product = (
                     Product.objects.filter(shop=shop, categories=category)
                     .order_by('price')
+                    .select_related('shop')
                     .first()
                 )
                 if cheapest_product:
