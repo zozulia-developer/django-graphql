@@ -9,24 +9,32 @@ class ShopType(DjangoObjectType):
 
 
 class ProductType(DjangoObjectType):
+    shop = graphene.Field(ShopType)
+
     class Meta:
         model = Product
+
+    def resolve_shop(self, info):
+        return self.shop
 
 
 class Query(graphene.ObjectType):
     cheapest_products = graphene.List(ProductType)
 
-    def resolve_cheapest_products(self, info):
-        products = Product.objects.all()
+    def resolve_cheapest_products(self, info, **kwargs):
+        shops = Shop.objects.all()
 
         cheapest_products = []
-        for shop_type, _ in Shop.SHOP_CATEGORIES.CATEGORIES_CHOICES:
-            for category in Category.objects.filter(shop_type=shop_type):
-                cheapest_product = products.filter(
-                    shop__shop_type=shop_type,
-                    categories=category,
-                ).order_by('price').first()
-
+        for shop in shops:
+            categories = Category.objects.filter(
+                name__in=Category.get_allowed_categories(shop.shop_type)
+            )
+            for category in categories:
+                cheapest_product = (
+                    Product.objects.filter(shop=shop, categories=category)
+                    .order_by('price')
+                    .first()
+                )
                 if cheapest_product:
                     cheapest_products.append(cheapest_product)
 
