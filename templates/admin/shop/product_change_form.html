@@ -1,0 +1,36 @@
+{% extends "admin/change_form.html" %}
+{% load static %}
+
+{% block content %}
+  {{ block.super }}
+  <script>
+    const updateCategories = async () => {
+        const shopSelect = document.getElementById("id_shop");
+        const categoriesSelect = document.getElementById("id_categories");
+
+        const selectedShop = shopSelect.options[shopSelect.selectedIndex].value;
+
+        if (selectedShop) {
+          try {
+              const response = await fetch(`/shop/admin/api/categories/?shop=${selectedShop}`);
+              const data = await response.json();
+
+              categoriesSelect.innerHTML = "";
+
+              data.forEach(category => {
+                  const option = document.createElement("option");
+                  option.text = category.name;
+                  option.value = category.id;
+                  categoriesSelect.add(option);
+              });
+          } catch (error) {
+              console.error("Error fetching categories:", error);
+          }
+        } else {
+            categoriesSelect.innerHTML = "";
+        }
+    };
+
+    document.getElementById("id_shop").addEventListener("change", updateCategories);
+  </script>
+{% endblock %}

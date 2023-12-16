@@ -44,6 +44,16 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    @staticmethod
+    def get_allowed_categories(shop_type):
+        allowed_categories_mapping = {
+            Shop.SHOP_CATEGORIES.SPORT: ['Зима', 'Літо', 'Футбол'],
+            Shop.SHOP_CATEGORIES.FOOD: ['Випічка', 'Солодощі', 'Алкоголь'],
+            Shop.SHOP_CATEGORIES.ELECTRONICS: ['Ноутбуки', 'Смартфони', 'Навушники'],
+        }
+
+        return allowed_categories_mapping.get(shop_type, [])
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100, verbose_name=_('Назва'))
