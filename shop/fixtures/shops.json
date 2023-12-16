@@ -1,0 +1,50 @@
+[
+  {
+    "model": "shop.shop",
+    "pk": 1,
+    "fields": {
+      "name": "Спорт",
+      "description": "Спорт магазин",
+      "shop_type": "sport",
+      "latitude": "25.0341",
+      "longitude": "105.1231",
+      "sales_commission": 2.5
+    }
+  },
+  {
+    "model": "shop.shop",
+    "pk": 2,
+    "fields": {
+      "name": "Їжа",
+      "description": "Магазин продуктів",
+      "shop_type": "food",
+      "latitude": "45.0873",
+      "longitude": "145.9678",
+      "sales_commission": 0.0
+    }
+  },
+  {
+    "model": "shop.shop",
+    "pk": 3,
+    "fields": {
+      "name": "Електроніка",
+      "description": "Магазин електроніки",
+      "shop_type": "electronics",
+      "latitude": "65.5674",
+      "longitude": "178.6789",
+      "sales_commission": 0.0
+    }
+  },
+  {
+    "model": "shop.shop",
+    "pk": 4,
+    "fields": {
+      "name": "Електроніка 2",
+      "description": "Магазин електроніки 2",
+      "shop_type": "electronics",
+      "latitude": "105.5674",
+      "longitude": "178.6789",
+      "sales_commission": 0.0
+    }
+  }
+]

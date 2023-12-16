@@ -1,0 +1,152 @@
+[
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "name": "Airpods 2",
+    "description": "Airpods 2",
+    "shop": 3,
+    "price": 125.0,
+    "weight": 0.25,
+    "keywords": "Airpods 2",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "name": "Airpods 3",
+    "description": "Airpods 3",
+    "shop": 3,
+    "price": 195.0,
+    "weight": 0.30,
+    "keywords": "Airpods 3",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "name": "ASUS Vivobook 14X OLED",
+    "description": "ASUS Vivobook 14X OLED",
+    "shop": 3,
+    "price": 775.0,
+    "weight": 2,
+    "keywords": "ASUS Vivobook 14X OLED",
+    "categories": [
+      4
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "name": "ASUS Vivobook 15X OLED",
+    "description": "ASUS Vivobook 15X OLED",
+    "shop": 3,
+    "price": 815.0,
+    "weight": 2.2,
+    "keywords": "ASUS Vivobook 15X OLED",
+    "categories": [
+      4
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "name": "ASUS Vivobook 16X OLED",
+    "description": "ASUS Vivobook 16X OLED",
+    "shop": 3,
+    "price": 795.5,
+    "weight": 2.5,
+    "keywords": "ASUS Vivobook 16X OLED",
+    "categories": [
+      4
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "name": "Наушники Redmi Buds 4 Lite",
+    "description": "Наушники Redmi Buds 4 Lite",
+    "shop": 2,
+    "price": 25.5,
+    "weight": 0.2,
+    "keywords": "Наушники Redmi Buds 4 Lite",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "name": "Airpods 2",
+    "description": "Airpods 2",
+    "shop": 4,
+    "price": 115.0,
+    "weight": 0.25,
+    "keywords": "Airpods 2",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "name": "Airpods 3",
+    "description": "Airpods 3",
+    "shop": 4,
+    "price": 185.0,
+    "weight": 0.30,
+    "keywords": "Airpods 3",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "name": "Airpods 2 PRO",
+    "description": "Airpods 2 PRO",
+    "shop": 4,
+    "price": 145.0,
+    "weight": 0.30,
+    "keywords": "Airpods 2 PRO",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "name": "Airpods",
+    "description": "Airpods",
+    "shop": 4,
+    "price": 110.0,
+    "weight": 0.2,
+    "keywords": "Airpods",
+    "categories": [
+      5
+    ]
+  }
+}
+]
