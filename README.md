@@ -6,38 +6,38 @@ This is a test task for Django-GraphQL.
 
 1. **Create Virtual Environment and Activate It:**
 ```bash
-   python -m venv venv
-   source venv/bin/activate
+python -m venv venv
+source venv/bin/activate
 ```
 2. **Install requirements**
-```commandline
+```bash
 pip install -r requirements.txt
 ```
 3. **Make and run migrations**
-```commandline
+```bash
 python manage.py makemigrations
 ```
-```commandline
+```bash
 python manage.py migrate
 ```
 4. **Run fixtures**
-```commandline
+```bash
 python manage.py loaddata fixtures/users.json
 ```
 
-```commandline
+```bash
 python manage.py loaddata shop/fixtures/shops.json
 ```
 
-```commandline
+```bash
 python manage.py loaddata shop/fixtures/categories.json
 ```
 
-```commandline
+```bash
 python manage.py loaddata shop/fixtures/products.json
 ```
 5. **Run server**
-```commandline
+```bash
 python manage.py runserver
 ```
 
