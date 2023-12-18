@@ -1,6 +1,7 @@
 import graphene
 from graphene_django.types import DjangoObjectType
-from .models import Shop, Product, Category
+
+from .models import Category, Product, Shop
 
 
 class ShopType(DjangoObjectType):

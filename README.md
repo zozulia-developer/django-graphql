@@ -1,17 +1,26 @@
-# django-graphql (test task)
+# Django-GraphQL (Test Task)
 
-## LOCAL DEPLOY
+This is a test task for Django-GraphQL.
 
-1. Create virtualenv and activate it
-2. Install requirements
+## Local Deploy
+
+1. **Create Virtual Environment and Activate It:**
+```bash
+   python -m venv venv
+   source venv/bin/activate
+```
+2. **Install requirements**
 ```commandline
 pip install -r requirements.txt
 ```
-3. Run server
+3. **Make and run migrations**
 ```commandline
-python manage.py runserver
+python manage.py makemigrations
 ```
-4. Run fixtures
+```commandline
+python manage.py migrate
+```
+4. **Run fixtures**
 ```commandline
 python manage.py loaddata fixtures/users.json
 ```
@@ -24,6 +33,16 @@ python manage.py loaddata shop/fixtures/shops.json
 python manage.py loaddata shop/fixtures/categories.json
 ```
 
-- Django admin creds:
+```commandline
+python manage.py loaddata shop/fixtures/products.json
+```
+5. **Run server**
+```commandline
+python manage.py runserver
+```
+
+---
+
+### Django admin creds:
   - username: admin
   - password: admin

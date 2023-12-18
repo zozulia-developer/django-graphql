@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .forms import ProductAdminForm
-from .models import Shop, Product, Category, ProductImage
+from .models import Category, Product, ProductImage, Shop
 
 
 class ProductImageAdmin(admin.StackedInline):

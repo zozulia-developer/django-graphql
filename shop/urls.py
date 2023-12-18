@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import GetCategoriesView
 
+from .views import GetCategoriesView
 
 app_name = 'shop'
 
