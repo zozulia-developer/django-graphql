@@ -13,14 +13,16 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-3. **Make and run migrations**
+3. **Create .env file, you can take .example.env**
+
+4. **Make and run migrations**
 ```bash
 python manage.py makemigrations
 ```
 ```bash
 python manage.py migrate
 ```
-4. **Run fixtures**
+5. **Run fixtures**
 ```bash
 python manage.py loaddata fixtures/users.json
 ```
@@ -36,7 +38,7 @@ python manage.py loaddata shop/fixtures/categories.json
 ```bash
 python manage.py loaddata shop/fixtures/products.json
 ```
-5. **Run server**
+6. **Run server**
 ```bash
 python manage.py runserver
 ```
